@@ -23,7 +23,7 @@ char *eq_check(char *str)
  * @b: second string
  * Return: returns 1 on success else returns 0
  */
-int *comp(char *a, char *b)
+int comp(char *a, char *b)
 {
 	int x = 0;
 

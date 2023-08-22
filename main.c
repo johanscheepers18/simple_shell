@@ -11,17 +11,17 @@ int main(int x, char **y, char **z)
 {
 	char *command, *a = NULL, *de = "\t \a\n", **b;
 
-	(void)argc;
+	(void)x;
 
 	b = path_finder(z);
 
-	signla(SIGINT, SIG_IGN);
+	signal(SIGINT, SIG_IGN);
 
 	while (1)
 	{
 		a = _rl();
 		y = split(a, de);
-		command = _args(y, b);
+		command = _path(y, b);
 
 		if (command == NULL)
 		{

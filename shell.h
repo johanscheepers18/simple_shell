@@ -19,7 +19,7 @@ char *_duplicate_str(char *str);
 
 /*str_man_2.c file functions*/
 char *eq_check(char *str);
-int *comp(char *a, char *b);
+int comp(char *a, char *b);
 
 /*_print.c file functions*/
 void _puts(char *str);

@@ -20,6 +20,6 @@ void _puts(char *str)
 
 	for (; str[x] != '\0'; x++)
 	{
-		_putchar(str[i]);
+		_putchar(str[x]);
 	}
 }

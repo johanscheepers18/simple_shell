@@ -1,4 +1,4 @@
-#include "shell.c"
+#include "shell.h"
 
 /**
  * exec - execute the commands
@@ -107,7 +107,7 @@ char **split(char *a, char *b)
 		j[x] = strtok(NULL, b);
 		if (x >= buff_size)
 		{
-			buff_sizxe += buff_size;
+			buff_size += buff_size;
 			j = mem_alloc(j, buff_size, buff_size * (sizeof(char *)));
 			if (!j)
 			{

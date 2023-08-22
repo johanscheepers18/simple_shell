@@ -51,11 +51,11 @@ char *_path(char **a, char **b)
 		c = malloc(60);
 		cat_str(c, b[x]);
 		cat_str(c, "/");
-		cat_str(c, a);
+		cat_str(c, a[0]);
 
-		if (stat(total, &status) == 0)
+		if (stat(c, &status) == 0)
 		{
-			for (; a[y] != '\0' ; y++)
+			for (; *a[y] != '\0' ; y++)
 			{
 				;
 			}
