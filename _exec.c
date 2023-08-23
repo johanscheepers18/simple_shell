@@ -3,11 +3,11 @@
 int exec(int *x, char **_args, char **_argv, char **a)
 {
     int y = 0;
-    char *a[] = ("cd", "pwd", "exit", "env");
+    char *b[] = {"cd", "pwd", "exit", "env"};
 
     for (; y < 4 ; y++)
     {
-        if (comp_str(_args[0], a[y]) == 0)
+        if (comp_str(_args[0], b[y]) == 0)
         {
             return (command_selec(_args, a));
         }
@@ -18,14 +18,14 @@ int exec(int *x, char **_args, char **_argv, char **a)
 
 int exe_handler(int *x, char **_args, char **_argv, char **a)
 {
-    int y, z, a = 0, b;
+    int y, z, c = 0, b;
     char *i = NULL;
 
-    b = _status(&i, &a, _args[0], *x, _argv[0], a);
+    b = _status(&i, &c, _args[0], *x, _argv[0], a);
 
     if (i != NULL)
     {
-        a++;
+        c++;
         z = fork();
 
         if (z == 0)
@@ -43,14 +43,14 @@ int exe_handler(int *x, char **_args, char **_argv, char **a)
             } while (!WIFEXITED(y) && !WIFSIGNALED(y));
         }
     }
-    if (a == 0)
+    if (c == 0)
     {
         if (b != 1)
         {
             _printf("%s: %d: %s: unable to locate\n", _argv[0], *x, _args[0]);
         }
     }
-    if (a == 2)
+    if (c == 2)
     {
         free(i);
     }

@@ -12,7 +12,7 @@ int _pwd(char **_args)
     return (1);
 }
 
-int _exit(char **_args)
+int _ex(char **_args)
 {
     char *x = "exit";
 
@@ -44,7 +44,7 @@ int command_selec(char **_args, char **a)
     cmd_sel commands[] = {
         {"cd", _cd  },
         {"pwd", _pwd},
-        {"exit", _exit},
+        {"exit", _ex},
         {"env", _env}
     };
 

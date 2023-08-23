@@ -28,39 +28,40 @@ typedef struct tp_fm
 
 typedef void (*sighandler_t)(int);
 
-//_print.c functions
+/*_print.c functions*/
 int _printf(const char *a, ...);
 void chr_print(va_list x, int *y);
 void str_print(va_list x, int *y);
 void int_print(va_list x, int *y);
 int _printn(int x, int *y);
 
-//_commands.c functions
+/*_commands.c functions*/
 int _cd(char **_args);
 int _pwd(char **_args);
 int _exit(char **_args);
 int _env(char **_args);
 int command_selec(char **_args, char **a);
 
-//_exec.c functions
+/*_exec.c functions*/
 int exec(int *x, char **_args, char **_argv, char **a);
 int exe_handler(int *x, char **_args, char **_argv, char **a);
 
-//_functions.c functions
+/*_functions.c functions*/
 char _enviro(char *_command, char **ar, int *n);
 int print_sel(const char *_type, int x, va_list _print, int *y);
 int _status(char **str, int *x, char *command, int y, char *arg, char **enviro);
 char **gen_tk(char *str);
 
-//_mem.c functions
+/*_mem.c functions*/
 void *mem_alloc(void *p, unsigned int x, unsigned int y);
 
-//_putchar.c
+/*_putchar.c*/
 int _putchar(char s, int *x);
 
-//str_man.c functions
+/*str_man.c functions*/
 int comp_str(char *dest, char *src);
 char *duplicate_str(char *str);
 char join_str(char *dest, char *src);
 int chr_count(char *s);
+
 #endif
