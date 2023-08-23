@@ -38,7 +38,7 @@ int _printn(int x, int *y);
 /*_commands.c functions*/
 int _cd(char **_args);
 int _pwd(char **_args);
-int _exit(char **_args);
+int _ex(char **_args);
 int _env(char **_args);
 int command_selec(char **_args, char **a);
 
