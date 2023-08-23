@@ -22,7 +22,7 @@ typedef struct commands
 
 typedef struct tp_fm
 {
-    char *i;
+    char i;
     void (*fm)(va_list, int *);
 }   tpFormat;
 
