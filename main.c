@@ -10,7 +10,7 @@ int main(int argc, char **argv, char **enviro)
     y = isatty(STDIN_FILENO);
     if (y)
     {
-        _printf("#cisfun$ ");
+        _printf("($) ");
     }
     while (x && (getline(&str, &j, stdin) != EOF))
     {
@@ -27,14 +27,14 @@ int main(int argc, char **argv, char **enviro)
 
                 if (x != 0 && y)
                 {
-                    _printf("#cisfun$ ");
+                    _printf("($) ");
                 }
                 z++;
             }
         }
         else if (y != 0)
         {
-            _printf("#cisfun$ ");
+            _printf("($) ");
         }
     }
 
