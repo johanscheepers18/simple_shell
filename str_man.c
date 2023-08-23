@@ -61,17 +61,17 @@ char join_str(char *dest, char *src)
         src = "";
     }
 
-    for (; dest[x] != '\0' ; x++)
+    while (dest[x])
     {
-        ;
+        x++;
     }
-    for (; src[y] != '\0' ; y++)
+    while (src[y])
     {
-        ;
+        y++;
     }
     y++;
 
-    c = (char *) malloc(sizeof(char) * (x + y));
+    c = (char *) malloc((x + y) * sizeof(char));
     if (c == NULL)
     {
         return (NULL);
