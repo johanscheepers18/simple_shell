@@ -7,7 +7,19 @@
  */
 int _putchar(char s)
 {
-	return (write(1, &s, 1));
+	static int i;
+	static char buffer[WRITE_BUF_SIZE];
+
+	if (s == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	{
+		write(1, buffer, i);
+		i = 0;
+	}
+	if (s != BUF_FLUSH)
+	{
+		buffer[i++] = s;
+	}
+	return (1);
 }
 
 /**
@@ -16,10 +28,15 @@ int _putchar(char s)
  */
 void _puts(char *str)
 {
-	int x = 0;
+	int i = 0;
 
-	for (; str[x] != '\0'; x++)
+	if (!str)
 	{
-		_putchar(str[x]);
+		return;
+	}
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
 	}
 }

@@ -11,6 +11,10 @@
 #include <limits.h>
 #include <signal.h>
 
+#define READ_BUF_SIZE 1024
+#define WRITE_BUF_SIZE 1024
+#define BUF_FLUSH -1
+
 /*str_man.c file functions*/
 unsigned int str_length(char *str);
 char *_rl(void);
