@@ -1,6 +1,6 @@
 #include "shell.h"
 
-char _enviro(char *_command, char **ar, int *n)
+char *_enviro(char *_command, char **ar, int *n)
 {
     int x = 0;
     char *de = "=:", *sl = "/", *p = "PATH";
