@@ -47,7 +47,7 @@ int exec(int *x, char **_args, char **_argv, char **a);
 int exe_handler(int *x, char **_args, char **_argv, char **a);
 
 /*_functions.c functions*/
-char _enviro(char *_command, char **ar, int *n);
+char *_enviro(char *_command, char **ar, int *n);
 int print_sel(const char *_type, int x, va_list _print, int *y);
 int _status(char **str, int *x, char *command, int y, char *arg, char **enviro);
 char **gen_tk(char *str);
