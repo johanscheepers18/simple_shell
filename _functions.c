@@ -4,8 +4,10 @@ char _enviro(char *_command, char **ar, int *n)
 {
     int x = 0;
     char *de = "=:", *sl = "/", *p = "PATH";
-    char *a = NULL, *b = NULL;
-    char *i = NULL, *j = NULL;
+    char *a = NULL;
+    char *b = NULL;
+    char *i = NULL;
+    char *j = NULL;
 
     while (ar[x])
     {
@@ -17,8 +19,8 @@ char _enviro(char *_command, char **ar, int *n)
             while (j)
             {
                 *n = *n + 1;
-                a = join_str(*j, *sl);
-                b = join_str(*a, *_command);
+                a = join_str(j, sl);
+                b = join_str(a, _command);
                 if (access(b, F_OK) == 0)
                 {
                     free(i);
