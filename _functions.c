@@ -19,8 +19,8 @@ char *_enviro(char *_command, char **ar, int *n)
             while (j)
             {
                 *n = *n + 1;
-                a = join_str(j, sl);
-                b = join_str(a, _command);
+                *a = join_str(j, sl);
+                *b = join_str(a, _command);
                 if (access(b, F_OK) == 0)
                 {
                     free(i);
