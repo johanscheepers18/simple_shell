@@ -47,7 +47,7 @@ int exe_handler(int *x, char **_args, char **_argv, char **a)
     {
         if (b != 1)
         {
-            _printf("%s: %d: %s: unable to locate\n", _argv[0], *x, _args[0]);
+            _printf("%s: No such file or directory\n", _argv[0], *x, _args[0]);
         }
     }
     if (c == 2)
