@@ -102,7 +102,7 @@ int _status(char **str, int *x, char *command, int y, char *arg, char **enviro)
         buf = malloc(sizeof(struct stat));
         if (buf == NULL)
         {
-            return (NULL);
+            return (1);
         }
         if (stat(command, buf) == 0 && S_ISDIR(buf->st_mode))
         {
