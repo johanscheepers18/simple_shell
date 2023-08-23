@@ -40,7 +40,7 @@ int main(int argc, char **argv, char **enviro)
 
     if (y && x != 0)
     {
-        _printf('\n');
+        _printf("\n");
     }
     free(str);
     free(a);
