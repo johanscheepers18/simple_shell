@@ -47,7 +47,7 @@ char *duplicate_str(char *str)
     return (a);
 }
 
-char join_str(char *dest, char *src)
+char *join_str(char *dest, char *src)
 {
     int x = 0, y = 0, z = 0, a = 0;
     char *c;

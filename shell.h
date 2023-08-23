@@ -61,7 +61,7 @@ int _putchar(char s, int *x);
 /*str_man.c functions*/
 int comp_str(char *dest, char *src);
 char *duplicate_str(char *str);
-char join_str(char *dest, char *src);
+char *join_str(char *dest, char *src);
 int chr_count(char *s);
 
 #endif
