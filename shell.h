@@ -17,8 +17,8 @@
 typedef struct commands
 {
     char *sel;
-    int (*com)(char **)
-} cmd_sel;
+    int (*com)(char **);
+}   cmd_sel;
 
 typedef struct tp_fm
 {
