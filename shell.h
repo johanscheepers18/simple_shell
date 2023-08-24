@@ -54,6 +54,7 @@ typedef struct passinfo
 	int env_changed;
 	int status;
 	char **cmd_buf;
+	int cmd_buf_type;
 	int readfd;
 	int histcount;
 } info_t;
